@@ -5,7 +5,7 @@ echo $error >> /root/send-mail.txt
 count=$(cat /root/send-mail.txt | wc -l)
 if [ "$count" == "1" ]
 then
-  mail -s "Error Detected"  < /root/send-mail.txt
+  mail -s "Error Detected"  $mail < /root/send-mail.txt
 else 
   echo "No Error"
 fi
